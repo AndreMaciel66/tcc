@@ -17,7 +17,7 @@ sources:
 
 ## Repensando a arquitetura de ambiente local para desenvolvimento de Análise de Dados Operacionais
 
-Objetivo deste artigo é estudar alternativas de linguagens, frameworks e de configuração ambiente para desenvolvimento de análise de dados operacionais com objetivo de automatizar a forma descrever as hipóteses e comentar as análises propostas seguidas pelo código, utilizando linguagens e frameworks Open Source.
+Objetivo deste artigo é propor alternativas de linguagens, frameworks e de configuração ambiente para desenvolvimento de análise de dados operacionais com objetivo de automatizar a forma descrever as hipóteses e comentar as análises propostas seguidas pelo código, utilizando linguagens e frameworks Open Source.
 
 ---
 
@@ -34,7 +34,8 @@ Objective of this article is to study alternatives of languages, frameworks and 
 
 Aqui você deve contextualizar o leitor sobre o seu tema, embasando-o teoricamente sobre o conteúdo trabalhado, bem como sobre o método utilizado na pesquisa.
 
-Estudo e trabalho encima deste tema/assunto desde 2016, e sempre estive a procura de encontrar um método que fosse de fácil abstração e implementação de análise de dados, com isso, neste período eu testei e estudei diversas soluções, algumas open source como Python, R e Javascript, e outras tecnologias pertencentes a grandes empresas como, o Power BI (Microsoft), Tableau, Qliksense. Diante deste cenário, em paralelo aos conteúdos aprendidos no curso de Análise e desenvolvimento de sistemas eu estou finalmente chegando a um template, baseado interamente em tecnologias Open Source.
+
+Estudo e trabalho encima deste tema/assunto desde ~2010, e sempre estive a procura de encontrar um método que fosse de fácil abstração e implementação de análise de dados, com isso, neste período eu testei e estudei diversas soluções, algumas open source como Python, R e Javascript, e outras tecnologias pertencentes a grandes empresas como, o Power BI (Microsoft), Tableau, Qliksense. Diante deste cenário, em paralelo aos conteúdos aprendidos no curso de Análise e desenvolvimento de sistemas eu estou finalmente chegando a um template, baseado interamente em tecnologias Open Source.
 
 Neste artigo vamos construir um ambiente utilizando o Python no backend e vamos construir uma aplicação em react para o front end. 
 
@@ -42,7 +43,13 @@ Eu acredito que um desenvolvedor full-stack é capaz de criar uma aplicação co
 
 ### Materias e Métodos
 
-Eu utilizei duas fontes academicas para pesquisa e infelizmente não encontrei nenhum artigo ainda que seja interessante debater com a minha proposta de objeto de estudo, sendo assim, vou utilizar as fontes que me fizeram chegar até neste ponto hoje, um deles é o Miguel Grinberg, um Engenheiro de software que escreveu um livro abordando a criação de um rest API utilizando o framework flask, inclusive, eu proponho um ambiente bem parecido, porém como o meu foco é mais voltado para análise de dados, vamos abordar algumas escolhas de frameworks diferentes de nossa referência.
+O método utilizado neste projeto experimental é baseado no livro Megaflask Tutorial de Miguel Grinberg, que propõe a criação de um REST API utilizando a linguagem Python, implementando o framework FLASK. O ambiente criado para este projeto tem como objetivo a criação de um produto de dados.
+
+Produto de dados consiste em uma aplicação de software para consumo de informações de uma fonte de dados. O software faz operações matemáticas e renderiza componentes visuais para análises estatísticas de dados, como gráficos, cartões, tabelas e KPI's. Proporcionando assim uma experiência visual de dados agradável e intuitiva ao consumidor, além de promover insights para tomada de decisões.
+
+Para análise dos dados, a biblioteca utilizada para renderizar os gráficos é a [Vega/Vega-Lite](https://vega.github.io/vega-lite/) que é implementada através da biblioteca de Python [Altair-Viz](https://altair-viz.github.io). O vega-lite é uma alternativa para renderizar componentes [D3](https://d3js.org/) sem a necessidade de curva de aprendizado que uma biblioteca java necessitaria.
+
+Com esta ferramenta é possível que toda a lógica de consumo, preparação, modelagem e visualização dos dados seja feita no backend.
 
 Para análise de dados, vamos utilizar uma biblioteca chamada Vega para renderizar nossos gráficos, a implementeção do [Vega/Vega-Lite](https://vega.github.io/vega-lite/) será realizada pelo [Altair-Viz](https://altair-viz.github.io), a escolha dessa biblioteca eu trago como uma alternativa para renderizar gráficos no topo do d3, sem precisar sofrer a curva de aprendizado que esta biblioteca em javascript demanda, tópico para outro artigo, a ideia é trazer toda a lógica de consumo, preparação e construção da visualização dos dados seja feita no backend.
 
